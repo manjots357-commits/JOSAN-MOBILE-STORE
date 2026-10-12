@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #072D33; /* Deep Jade Teal */
+    --bg-burgundy: #33091B; /* Deep Burgundy */
+    --accent-champagne: #DFBE8B; /* Champagne / Warm Sand */
+    --accent-dusty: #8F5C64; /* Dusty Burgundy */
+    --accent-jade: #3A7564; /* Jade Green */
+    --accent-sage: #9ABCAB; /* Soft Sage */
+    --text-primary: #F5F2EA; /* Warm Off-white */
+    --text-secondary: #C8D8D0; /* Soft Sage text */
+    --glass-surface: rgba(7, 45, 51, 0.60);
+    --glass-border: rgba(155, 188, 171, 0.20);
+    --glass-highlight: rgba(223, 190, 139, 0.18);
+  }
+
+  body {
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    background-color: #072D33;
+    color: #F5F2EA;
+  }
+
+  /* On desktop fine-pointer devices, hide standard cursor over interactive zones to elevate custom cursor experience */
+  @media (pointer: fine) {
+    a, button, [role="button"], input, select, textarea, [data-cursor] {
+      cursor: none !important;
+    }
+  }
+
+  /* Custom Jade & Champagne scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #072D33;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A7564;
+    border: 1px solid rgba(155, 188, 171, 0.20);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #DFBE8B;
+  }
+}
+
+/* Glass UI Helper Classes matching user spec:
+   background: rgba(7,45,51,0.60)
+   border: rgba(155,188,171,0.20)
+   highlight: rgba(223,190,139,0.18)
+*/
+.glass-panel {
+  background: rgba(7, 45, 51, 0.60);
+  border: 1px solid rgba(155, 188, 171, 0.20);
+  box-shadow: 0 8px 32px 0 rgba(3, 20, 23, 0.45);
+}
+
+.glass-panel-subtle {
+  background: rgba(7, 45, 51, 0.40);
+  border: 1px solid rgba(155, 188, 171, 0.15);
+}
+
+.glass-burgundy {
+  background: rgba(51, 9, 27, 0.70);
+  border: 1px solid rgba(143, 92, 100, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(10, 2, 5, 0.45);
+}
+
+.glass-highlight {
+  box-shadow: inset 0 1px 1px 0 rgba(223, 190, 139, 0.18);
+}
+
+.champagne-glow {
+  box-shadow: 0 0 20px -3px rgba(223, 190, 139, 0.35);
+}
+
+.champagne-glow-sm {
+  box-shadow: 0 0 10px -2px rgba(223, 190, 139, 0.25);
+}
+
+.jade-glow {
+  box-shadow: 0 0 20px -3px rgba(58, 117, 100, 0.40);
+}
+
+/* Organic liquid mineral wave keyframes */
+@keyframes organic-float {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(25px, -18px) scale(1.04);
+  }
+  66% {
+    transform: translate(-18px, 20px) scale(0.97);
+  }
+}
+
+.animate-organic-wave {
+  animation: organic-float 24s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Accessibility & Visible Focus Rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #DFBE8B !important;
+  outline-offset: 3px !important;
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-organic-wave {
+    animation: none !important;
+  }
+}
+
+
+
+

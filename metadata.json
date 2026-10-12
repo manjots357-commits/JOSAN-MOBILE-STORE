@@ -1,0 +1,6 @@
+{
+  "name": "Josan Computer & Mobile - Cinematic Showroom",
+  "description": "Interactive cinematic technology showroom and smartphone store featuring real store videos, 3D device visualizer, magnetic cursor interactions, and live customer deliveries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
