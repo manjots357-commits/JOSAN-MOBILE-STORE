@@ -17,7 +17,7 @@ export const StoreExperienceSection: React.FC<StoreExperienceSectionProps> = ({
   const [activeFrameIdx, setActiveFrameIdx] = useState(0);
 
   return (
-    <section id="store" className="relative py-24 bg-[#33091B] overflow-hidden border-t border-[rgba(143,92,100,0.3)]">
+    <section id="store" className="relative py-24 bg-[#33091B]/60 overflow-hidden border-t border-[rgba(143,92,100,0.3)]">
       {/* Background Parallax Layer */}
       <SectionParallaxBg variant="burgundy" watermarkText="08 // PHYSICAL BOUTIQUE" glowPosition="center" />
 

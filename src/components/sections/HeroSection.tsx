@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="home"
-      className="relative w-full min-h-[100svh] lg:h-screen lg:max-h-[960px] flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 pb-4 sm:pb-6 bg-[#072D33]"
+      className="relative w-full min-h-[100svh] lg:h-screen lg:max-h-[960px] flex flex-col justify-between overflow-hidden pt-20 sm:pt-24 pb-4 sm:pb-6 bg-transparent"
     >
       {/* 1. Restrained Architectural Showroom Background */}
       <div className="absolute inset-0 pointer-events-none select-none z-0">

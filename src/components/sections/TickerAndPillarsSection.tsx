@@ -49,7 +49,7 @@ export const TickerAndPillarsSection: React.FC = () => {
   const [activePillarIdx, setActivePillarIdx] = useState(0);
 
   return (
-    <section className="relative py-16 bg-[#072D33] overflow-hidden border-t border-b border-[rgba(155,188,171,0.20)]">
+    <section className="relative py-16 bg-[#072D33]/40 overflow-hidden border-t border-b border-[rgba(155,188,171,0.20)]">
       {/* Background Parallax Layer */}
       <SectionParallaxBg variant="jade" glowPosition="top-right" />
 

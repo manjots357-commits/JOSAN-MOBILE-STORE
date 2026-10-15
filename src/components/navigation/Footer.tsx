@@ -4,7 +4,7 @@ import { MagneticElement } from '../cursor/MagneticElement';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-[#072D33] border-t border-[rgba(155,188,171,0.20)] py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="relative bg-[#072D33]/60 border-t border-[rgba(155,188,171,0.20)] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-1 text-center md:text-left">
           <div className="text-base font-extrabold text-[#F5F2EA] tracking-tight">

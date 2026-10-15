@@ -6,7 +6,7 @@ import { MapPin, Phone, Clock, MessageCircle, Navigation, ShieldCheck, Wrench, C
 
 export const StoreLocationSection: React.FC = () => {
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[rgba(155,188,171,0.20)] overflow-hidden bg-[#072D33]">
+    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[rgba(155,188,171,0.20)] overflow-hidden bg-[#072D33]/45">
       {/* Background Parallax Layer */}
       <SectionParallaxBg variant="jade" glowPosition="top-right" />
 
@@ -95,7 +95,7 @@ export const StoreLocationSection: React.FC = () => {
                   Location Marker &bull; Punjab Flagship
                 </div>
                 <div className="text-[11px] text-[#9ABCAB] font-mono">
-                  Coordinates: 30.9010° N, 75.8573° E
+                  Verowal Road, Jandiala Guru &bull; PIN 143115
                 </div>
               </div>
             </div>

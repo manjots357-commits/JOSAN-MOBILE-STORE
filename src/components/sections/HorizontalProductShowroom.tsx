@@ -222,7 +222,7 @@ export const HorizontalProductShowroom: React.FC<HorizontalProductShowroomProps>
   };
 
   return (
-    <section id="phones" className="relative py-20 lg:py-24 bg-[#072D33] overflow-hidden border-t border-[rgba(155,188,171,0.20)]">
+    <section id="phones" className="relative py-20 lg:py-24 bg-[#072D33]/45 overflow-hidden border-t border-[rgba(155,188,171,0.20)]">
       {/* Background Parallax Layer */}
       <SectionParallaxBg variant="jade" glowPosition="top-left" />
 

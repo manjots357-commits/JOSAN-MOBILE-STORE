@@ -58,7 +58,7 @@ export const CinematicDealsSection: React.FC<CinematicDealsSectionProps> = ({
   const storeVideo = storeVideos[0];
 
   return (
-    <section id="deals" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[rgba(155,188,171,0.20)] overflow-hidden bg-[#072D33]">
+    <section id="deals" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[rgba(155,188,171,0.20)] overflow-hidden bg-[#072D33]/45">
       {/* Background Parallax Layer */}
       <SectionParallaxBg variant="jade" glowPosition="top-right" />
 

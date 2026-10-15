@@ -198,6 +198,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({
             <button
               onClick={toggleSound}
               title={isMuted ? 'Unmute' : 'Mute'}
+              aria-label={isMuted ? 'Unmute video' : 'Mute video'}
               className="p-1.5 rounded-lg bg-[#072D33]/85 hover:bg-[#3A7564] text-[#C8D8D0] hover:text-[#F5F2EA] border border-[rgba(155,188,171,0.25)] transition-colors"
             >
               {isMuted ? <VolumeX className="w-3 h-3" /> : <Volume2 className="w-3 h-3 text-[#DFBE8B]" />}
@@ -210,6 +211,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({
                   onOpenCinema(media);
                 }}
                 title="Expand Cinema View"
+                aria-label="Expand Cinema View"
                 className="p-1.5 rounded-lg bg-[#072D33]/85 hover:bg-[#3A7564] text-[#C8D8D0] hover:text-[#F5F2EA] border border-[rgba(155,188,171,0.25)] transition-colors"
               >
                 <Maximize2 className="w-3 h-3" />
@@ -226,6 +228,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({
         >
           <button
             onClick={togglePlay}
+            aria-label={isPlaying ? 'Pause video' : 'Play video'}
             className="pointer-events-auto w-11 h-11 rounded-full bg-[#DFBE8B] text-[#072D33] flex items-center justify-center shadow-lg shadow-[#DFBE8B]/30 transform transition-transform duration-150 hover:scale-110 active:scale-95"
           >
             {isPlaying ? (

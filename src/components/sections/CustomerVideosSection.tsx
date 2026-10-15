@@ -13,7 +13,7 @@ export const CustomerVideosSection: React.FC<CustomerVideosSectionProps> = ({ on
   const activeList = activeTab === 'customer' ? customerVideos : instagramVideos;
 
   return (
-    <section id="customers" className="relative py-20 lg:py-24 bg-[#33091B] border-t border-[rgba(143,92,100,0.30)] overflow-hidden">
+    <section id="customers" className="relative py-20 lg:py-24 bg-[#33091B]/60 border-t border-[rgba(143,92,100,0.30)] overflow-hidden">
       {/* Background Parallax Layer with Burgundy Theme */}
       <SectionParallaxBg variant="burgundy" theme="burgundy" glowPosition="top-left" />
 

@@ -108,12 +108,12 @@ export const SectionParallaxBg: React.FC<SectionParallaxBgProps> = ({
       {/* 3. Soft Top & Bottom Natural Vignette Transitions */}
       <div
         className={`absolute inset-x-0 top-0 h-32 bg-gradient-to-b ${
-          isBurgundyTheme ? 'from-[#33091B]' : 'from-[#072D33]'
+          isBurgundyTheme ? 'from-[#33091B]/80' : 'from-[#072D33]/60'
         } to-transparent pointer-events-none`}
       />
       <div
         className={`absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t ${
-          isBurgundyTheme ? 'from-[#33091B]' : 'from-[#072D33]'
+          isBurgundyTheme ? 'from-[#33091B]/80' : 'from-[#072D33]/60'
         } to-transparent pointer-events-none`}
       />
     </div>

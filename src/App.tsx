@@ -166,7 +166,7 @@ export default function App() {
         {/* Advanced Desktop Custom Cursor & Ambient Champagne Light */}
         <CustomCursor />
 
-        {/* Live Subtle Cinematic Rain & Wet Showroom Atmosphere */}
+        {/* Shared Persistent Rain Background across the ENTIRE Website */}
         <CinematicRainAtmosphere />
 
         {/* Floating Glass Navbar with Shrink-On-Scroll */}

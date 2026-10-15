@@ -13,6 +13,11 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({ media, onClose }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [hasVideoError, setHasVideoError] = useState(false);
+
+  useEffect(() => {
+    setHasVideoError(false);
+  }, [media]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -108,8 +113,20 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({ media, onClose }) => {
             loop
             playsInline
             onTimeUpdate={handleTimeUpdate}
+            onError={() => setHasVideoError(true)}
             className="w-full h-full max-h-[60vh] object-contain"
           />
+
+          {hasVideoError && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#072D33]/80 p-6 text-center z-20 pointer-events-none">
+              <span className="text-xs font-mono text-[#DFBE8B] font-bold uppercase tracking-wider mb-1">
+                Verified In-Store Delivery Record
+              </span>
+              <p className="text-xs text-[#C8D8D0] max-w-sm">
+                Full unboxing footage and delivery verification available directly via WhatsApp or on counter.
+              </p>
+            </div>
+          )}
 
           {/* Video Control Bar on Bottom */}
           <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#072D33]/95 via-[#072D33]/60 to-transparent flex flex-col gap-2">
@@ -128,6 +145,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({ media, onClose }) => {
               <div className="flex items-center gap-3">
                 <button
                   onClick={togglePlay}
+                  aria-label={isPlaying ? 'Pause video' : 'Play video'}
                   className="p-1.5 rounded-lg bg-[rgba(7,45,51,0.85)] hover:bg-[#3A7564] hover:text-[#F5F2EA] text-[#DFBE8B] transition-colors"
                 >
                   {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current ml-0.5" />}
@@ -135,6 +153,7 @@ export const CinemaModal: React.FC<CinemaModalProps> = ({ media, onClose }) => {
 
                 <button
                   onClick={toggleMute}
+                  aria-label={isMuted ? 'Unmute video' : 'Mute video'}
                   className="p-1.5 rounded-lg bg-[rgba(7,45,51,0.85)] hover:bg-[#3A7564] hover:text-[#F5F2EA] text-[#DFBE8B] transition-colors"
                 >
                   {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4 text-[#DFBE8B]" />}

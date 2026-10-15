@@ -117,7 +117,7 @@ export const Hero3DPhone: React.FC<Hero3DPhoneProps> = ({ className = '' }) => {
       {/* 1. ATMOSPHERIC HALO & RADIAL SPOTLIGHT BEHIND DEVICE */}
       <div
         ref={haloRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[480px] h-[380px] sm:h-[480px] rounded-full pointer-events-none z-0 transition-transform duration-300 ease-out"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[380px] md:w-[460px] h-[280px] sm:h-[380px] md:h-[460px] rounded-full pointer-events-none z-0 transition-transform duration-300 ease-out"
         style={{
           background: 'radial-gradient(circle, rgba(223, 190, 139, 0.22) 0%, rgba(58, 117, 100, 0.16) 42%, rgba(7, 45, 51, 0) 70%)',
           filter: 'blur(45px)',
@@ -126,7 +126,7 @@ export const Hero3DPhone: React.FC<Hero3DPhoneProps> = ({ className = '' }) => {
 
       {/* 2. ILLUMINATED CIRCULAR PEDESTAL PLATFORM BENEATH THE PHONE */}
       <div
-        className="absolute -bottom-4 sm:-bottom-6 left-1/2 -translate-x-1/2 w-[320px] sm:w-[400px] h-[90px] sm:h-[110px] pointer-events-none z-0"
+        className="absolute -bottom-3 sm:-bottom-5 left-1/2 -translate-x-1/2 w-[240px] sm:w-[320px] md:w-[380px] h-[70px] sm:h-[90px] md:h-[105px] pointer-events-none z-0"
         style={{
           transform: 'perspective(600px) rotateX(68deg)',
         }}
@@ -135,19 +135,19 @@ export const Hero3DPhone: React.FC<Hero3DPhoneProps> = ({ className = '' }) => {
         <div className="absolute inset-0 rounded-full border-2 border-[#DFBE8B]/50 shadow-[0_0_35px_rgba(223,190,139,0.45)] bg-gradient-to-b from-[#DFBE8B]/20 via-[#072D33]/90 to-[#021114]" />
         
         {/* Inner concentric ring */}
-        <div className="absolute inset-3 rounded-full border border-[#DFBE8B]/30 bg-gradient-to-t from-[#021114] to-[#0a353c]/80" />
+        <div className="absolute inset-2.5 rounded-full border border-[#DFBE8B]/30 bg-gradient-to-t from-[#021114] to-[#0a353c]/80" />
         
         {/* Core mirror reflection pool */}
-        <div className="absolute inset-x-10 inset-y-4 rounded-full bg-radial from-[#DFBE8B]/30 via-transparent to-transparent blur-md" />
+        <div className="absolute inset-x-8 inset-y-3 rounded-full bg-radial from-[#DFBE8B]/30 via-transparent to-transparent blur-md" />
         
         {/* Drop shadow cast by phone plinth */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-8 rounded-full bg-black/80 blur-lg" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 sm:w-48 h-6 sm:h-8 rounded-full bg-black/80 blur-lg" />
       </div>
 
       {/* 3. PHOTOREALISTIC 3D SMARTPHONE BODY */}
       <div
         ref={phoneRef}
-        className="relative z-10 w-[290px] sm:w-[330px] md:w-[350px] h-[580px] sm:h-[660px] md:h-[700px] will-change-transform"
+        className="relative z-10 w-[240px] sm:w-[290px] md:w-[335px] h-[480px] sm:h-[580px] md:h-[670px] will-change-transform"
         style={{
           transformStyle: 'preserve-3d',
           transition: 'transform 0.05s linear',

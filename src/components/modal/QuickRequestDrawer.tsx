@@ -144,7 +144,7 @@ export const QuickRequestDrawer: React.FC<QuickRequestDrawerProps> = ({
             </label>
             <input
               type="text"
-              placeholder="e.g. iPhone 17 Pro 512GB Desert Titanium or Fold 7 stock"
+              placeholder="e.g. iPhone 16 Pro Max 512GB Desert Titanium or Galaxy Z Fold 6 stock"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               className="w-full px-3.5 py-2 rounded-xl bg-[rgba(7,45,51,0.85)] border border-[rgba(155,188,171,0.22)] text-xs text-[#F5F2EA] focus:border-[#DFBE8B] focus:outline-none"

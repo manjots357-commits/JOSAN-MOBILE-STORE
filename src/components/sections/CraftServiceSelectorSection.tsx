@@ -54,7 +54,7 @@ const ELEMENTS: ElementService[] = [
     tabLabel: 'Setup & Support',
     tagline: 'Complete In-Person Data Migration & Device Consultation',
     description: 'Walk into our store and receive hands-on assistance. We configure your new smartphone, transfer your data, and answer questions at your pace.',
-    image: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=800&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80&auto=format&fit=crop',
     features: [
       { label: 'Full Data & WhatsApp Transfer', price: 'Assisted Free' },
       { label: 'SIM & eSIM Activation Setup', price: 'Included' },

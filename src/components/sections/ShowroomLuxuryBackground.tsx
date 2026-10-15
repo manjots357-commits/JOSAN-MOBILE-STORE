@@ -35,8 +35,8 @@ export const ShowroomLuxuryBackground: React.FC = () => {
       className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none z-0"
       aria-hidden="true"
     >
-      {/* 1. Deep architectural studio gradient (Dark-Teal to Obsidian & Plum) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#021114] via-[#072D33] to-[#041518]" />
+      {/* 1. Deep architectural studio gradient (Translucent to let shared rain background show through) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#021114]/75 via-[#072D33]/45 to-[#041518]/75" />
 
       {/* 2. Soft, diffuse warm champagne backlight behind the showroom display focus */}
       <div
